@@ -1,4 +1,4 @@
 GridEngineContribScripts
 ========================
 
-Grid engine User Contributed Scripts Repository
+Grid Engine User Contributed Scripts Repository
