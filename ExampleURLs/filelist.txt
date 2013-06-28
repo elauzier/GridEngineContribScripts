@@ -1,1 +1,12 @@
-filelist.txt
+June 2013
+
+https://github.com/UCL/opsview-gridengine-integration
+
+Since  I received an enquiry about this we have now made this available 
+for anyone who wants it.  The code is available at:  
+https://github.com/UCL/opsview-gridengine-integration .
+Bear in mind that this was written for our own cluster so there are a 
+few assumptions baked into the code.
+
+William 
+
