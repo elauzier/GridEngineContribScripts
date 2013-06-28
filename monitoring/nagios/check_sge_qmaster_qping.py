@@ -15,7 +15,7 @@ import shlex
 import subprocess
 import signal
 
-progname = 'check_sge_qmaster'
+progname = 'check_sge_qmaster_qping'
 version  = '0.1'
 nagiosStateOk = 0
 nagiosStateWarning = 1
@@ -30,7 +30,7 @@ childPid = 0
 timeout = 15
 
 def printUsage():
-    print 'Usage: check_sge -H <hostname> -C <sge_cell_name> -t <timeout>'
+    print 'Usage: check_sge_qmaster_qping -H <hostname> -C <sge_cell_name> -t <timeout>'
 
 def printHelp():
     printUsage()
@@ -82,14 +82,14 @@ for opt, arg in optlist:
         printUsage()
         sys.exit(nagiosStateUnknown)
         
-if sgeCell == 'genomics':
+if sgeCell == 'prod':
 	os.environ['SGE_ROOT']          = '/site/gridengine/soge'
 	os.environ['SGE_QMASTER_PORT']  = '16444'
 	os.environ['SGE_CLUSTER_NAME']  = 'prod'
 	os.environ['SGE_CELL']          = 'prod'
 	os.environ['SGE_EXECD_PORT']    = '16445'
 	
-if sgeCell == 'genomicstest':
+if sgeCell == 'test':
 	os.environ['SGE_ROOT']          = '/site/gridengine/soge'
 	os.environ['SGE_QMASTER_PORT']  = '17444'
 	os.environ['SGE_CLUSTER_NAME']  = 'test'
